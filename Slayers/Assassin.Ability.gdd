@@ -1,0 +1,108 @@
+Assassin.Ability
+{
+	passiveAbility //name //type = Buff
+	{
+		"Gains 0.4% lifeSteal for every 1% of your missing health."
+	}
+	
+	ability1 //name //type = Projectile
+	{
+		[1] : //name
+		"Throws three shurikens in a straight line, dealing # damages on hit."
+
+		manaCost = []
+		physicalDamages = [30, 40, 50, 60] + 30% AD
+		cooldown = [6, 5.5, 5, 4.5]
+
+		[2] : //name
+		"Throws three shurikens in a cone, dealing # damages on hit. The central shuriken slows the enemy by # for # seconds."
+
+		manaCost = []
+		physicalDamages = [30, 40, 50, 60] + 20% AD
+		slow = 10% + 20% AP
+		cooldown = [6, 5.5, 5, 4.5]
+
+		[3] : //name
+		"Throws a poisoned kunai dealing # damages on hit and poisoning the enemy. The poison deals # damages per second during # seconds."
+
+		manaCost = []
+		physicalDamages = [30, 40, 50, 60] + 20% AD
+		poisonDamagesPerSecond = [10, 15, 20, 25] + 30% AP
+		poisonDuration = [2, 2.5, 3, 3.5]
+		cooldown = [6, 5.5, 5, 4.5]
+	}
+
+	ability2 //name //type = Movement
+	{
+		[1] : //name
+		"Projects himself forward, dealing # damages to all crossed enemies."
+
+		manaCost = []
+		physicalDamages = [50, 65, 80, 95] + 25% AD
+		cooldown = [12, 10.5, 9, 7.5]
+		range = 125
+
+
+		[2] : //name
+		"Teleports to the targeted area, dealing # damages around the impact area."
+
+		manaCost = []
+		magicDamages = [30, 40, 50, 60] + 30% AP
+		physicalDamages = [10, 20, 30, 40] + 10% AD
+		cooldown = [12, 11, 10, 9]
+		range = 135
+
+		[3] : //name
+		"Rolls in the targeted direction, gaining # bonus speed and # critical hit chance for # seconds."
+
+		manaCost = []
+		bonusSpeed = [10%, 15%, 20%, 25%]
+		bonusCritChance = [15%, 20%, 25%, 30%]
+		bonusDuration = [2.5, 3, 3.5, 4]
+		cooldown = [11, 9.5, 8, 6.5]
+	}
+
+	itemAbility //name //type = Trap
+	{
+		[1] : //name
+		"Puts down a hidden spike, revealing and dealing # damages to the enemy walking on it. The spike disappears after # seconds."
+
+		damages = 4% of target max health
+		lifeTime = 30
+		cooldown = 25
+
+		[2] : //name
+		""
+
+		[3] : //name
+		""
+	}
+
+	ultimate //name //type = Stealth, Buff
+	{
+		[1] : //name
+		"Becomes invisible during # seconds.
+		The first enemy you damage is poisoned. The poison deals # damages per second during # seconds.
+		" + invisibility_description
+
+		manaCost = []
+		invisibilityDuration = [5, 7, 9]
+		poisonDamagesPerSecond = [10, 15, 20] + 30% AP
+		poisonDuration = [2, 2.5, 3]
+		cooldown = [65, 60, 55]
+
+		[2] : //name
+		"Enter stealth for # seconds." + stealth_description
+
+		manaCost = []
+		stealthDuration = [12, 16, 20]
+		cooldown = [75, 70, 65]
+
+		[3] : //name
+		"Creates a clone of the ninja, walking forward in the selected direction and giving vision to your team."
+
+		manaCost = []
+		cloneLifeTime = [5, 10, 5]
+		cooldown = [55, 50, 45]
+	}
+}

@@ -1,0 +1,39 @@
+Archetype {Assassin, Viking, Hunter, Heavy, Mage}
+
+Role {Toplaner, Prowler, Carry, Support, Botlaner}
+
+AutoAttack {Contact, ShortRange, LongRange}
+
+Ability {passiveAbility, ability1[3], ability2[3], itemAbility[3], ultimate[3]}
+
+Archetype.Role // mainRole & secondRole
+{
+	Assassin	{Toplaner}		{Carry, Botlaner};
+	Viking		{Prowler}		{Toplaner, Support};
+	Hunter		{Carry}			{Prowler, Botlaner};
+	Heavy		{Support}		{Toplaner, Prowler};
+	Mage		{Botlaner}		{Carry, Support};
+}
+
+Archetype.AutoAttack
+{
+	Assassin	{Contact};
+	Viking		{Contact};
+	Hunter		{LongRange};
+	Heavy		{ShortRange};
+	Mage		{LongRange};
+}
+
+Archetype.DealAbilityDamages
+{
+	physDamages
+	magicDamages
+	physPen
+	magicPen
+	trueDamages
+}
+
+Archetype.DealAutoAttackDamages
+{
+
+}

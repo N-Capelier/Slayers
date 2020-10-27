@@ -1,0 +1,42 @@
+Entity
+{
+	position
+	name
+
+	Solid
+	{
+		collider
+
+		Living
+		{
+			healthPoints
+
+			Archetype
+			{
+				Archetype.gdd
+			}
+		}
+	}
+}
+
+static Client
+{
+	
+}
+
+static Game
+{
+	game.gdd
+}
+
+#Managers
+
+GameManager : Singleton
+{
+	//in-game data
+}
+
+SoundManager : Singleton
+{
+	//in-game sound
+}

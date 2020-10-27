@@ -1,0 +1,27 @@
+Viking.Ability
+{
+	ability1
+	{
+		"",
+		"",
+		""
+	}
+	ability2
+	{
+		"",
+		"",
+		""
+	}
+	itemAbility
+	{
+		"",
+		"",
+		""
+	}
+	ultimate
+	{
+		"",
+		"",
+		""
+	}
+}
